@@ -140,6 +140,6 @@ func (s *Slice[T]) Last() (t T) {
 
 // Reset 重置切片
 func (s *Slice[T]) Reset() *Slice[T] {
-	s.data = s.data[:]
+	s.data = make([]T, 0)
 	return s
 }
